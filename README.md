@@ -1,2 +1,0 @@
-# aviansh_portfolio
-Analytics_portfolio
