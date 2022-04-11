@@ -1,0 +1,297 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled30.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOMqkFeSrPeflYaVXOra3ln",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/avinashLam/aviansh_portfolio/blob/main/NumPy%20Linear%20Algebra\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kiRIdvKUOpdQ",
+        "outputId": "2233df72-0eef-4c3d-8248-d2376908b5f9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[ 9 16 21]\n",
+            "  [24 25 24]\n",
+            "  [21 16  9]]]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np  \n",
+        "array1=np.array([[1,2,3],[4,5,6],[7,8,9]],ndmin=3)  \n",
+        "array2=np.array([[9,8,7],[6,5,4],[3,2,1]],ndmin=3)  \n",
+        "result=np.multiply(array1,array2)\n",
+        "print(result)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Matmul"
+      ],
+      "metadata": {
+        "id": "z-hpxu5zPTxl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np  \n",
+        "array1=np.array([[1,2,3],[4,5,6],[7,8,9]],ndmin=3)  \n",
+        "array2=np.array([[9,8,7],[6,5,4],[3,2,1]],ndmin=3)  \n",
+        "result=np.matmul(array1,array2)\n",
+        "print(result)  \n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "biKgeiCFOslg",
+        "outputId": "0c383e4b-a258-42fc-8a78-e0b690e6642b"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[ 30  24  18]\n",
+            "  [ 84  69  54]\n",
+            "  [138 114  90]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Dot product"
+      ],
+      "metadata": {
+        "id": "76hgsMEFPW-W"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np  \n",
+        "array1=np.array([[1,2,3],[4,5,6],[7,8,9]],ndmin=3)  \n",
+        "array2=np.array([[9,8,7],[6,5,4],[3,2,1]],ndmin=3)  \n",
+        "result=np.dot(array1,array2)\n",
+        "print(result)  \n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1ryFl7lDOvBm",
+        "outputId": "20cdfd65-4f11-431d-a70e-dfd2220e8969"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[[ 30  24  18]]\n",
+            "\n",
+            "  [[ 84  69  54]]\n",
+            "\n",
+            "  [[138 114  90]]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Vector Dot Product"
+      ],
+      "metadata": {
+        "id": "fkTUPml5PZOt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np  \n",
+        "array1=np.array([[1,2,3],[4,5,6],[7,8,9]],ndmin=3)  \n",
+        "array2=np.array([[9,8,7],[6,5,4],[3,2,1]],ndmin=3)  \n",
+        "result=np.vdot(array1,array2)\n",
+        "print(result)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D0_iPgKJOxoH",
+        "outputId": "aa233cd6-fe8f-4251-ae0b-0034c82eba84"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "165\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Linear algebra Solve the equation"
+      ],
+      "metadata": {
+        "id": "1CdoWucnPdwF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=np.array([[3,2,1]])\n",
+        "b=np.array([[1,1,1]])\n",
+        "print(np.linalg.solve(a,b))"
+      ],
+      "metadata": {
+        "id": "hZq5NocpO0H2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Inner Product"
+      ],
+      "metadata": {
+        "id": "b4K4Pon2Pi2V"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=np.array([[3,2,1]])\n",
+        "b=np.array([[1,1,1]])\n",
+        "print(np.inner(a,b))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "teMOi4PmO1IF",
+        "outputId": "3219193d-d4b5-4155-b47f-ef5b1b764f3c"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[6]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Det of Matrix"
+      ],
+      "metadata": {
+        "id": "h4TVAI2tPlOF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=np.array([[1,2],[3,4]])\n",
+        "print(np.linalg.det(a))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tWO-w8qtPD5G",
+        "outputId": "89c65175-0e28-4286-a480-76bba035e219"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "-2.0000000000000004\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Inverse matrix "
+      ],
+      "metadata": {
+        "id": "SzCODUzTPySd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=np.array([[1,2],[3,4]])\n",
+        "print(np.linalg.inv(a))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FUflaCf_P0XF",
+        "outputId": "641411d0-787d-4e98-d258-4c2d3b5fb85a"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[-2.   1. ]\n",
+            " [ 1.5 -0.5]]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
